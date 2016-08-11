@@ -1,0 +1,180 @@
+/**
+ * lumenvita.css
+ *
+ * Lumen et Vita stylesheet.  Adopted from classicRed.css
+ *
+ */
+
+
+body {
+	background-color: #fff;
+	font-family: "Scalia", Times, Georgia, serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #B10000;
+}
+
+a:active {
+	color: #993338;
+}
+
+a:visited {
+	color: #B10000;
+}
+
+a:hover {
+	color: #EECCCC;
+	background: #B10000;
+}
+
+label.error {
+	color: #f60;
+}
+
+input.defaultButton {
+	color: #EECCCC;
+	background: #B10000;
+}
+
+#container {
+	background-color: #fff;
+	font-size: 1em;
+}
+
+#header {
+	min-height: 100px;
+	background-color: #fff;
+}
+
+#headerTitle {
+	text-align: center;
+}
+
+#header h1 {
+	line-height: 2.5;
+	font-family: "Scalia", Times, Georgia, serif;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-size: 2em;
+	background-color: #B10000;
+	color:  #fff;
+}
+
+#footer {
+	background-color: #600;
+	color:  #fff;
+}
+
+#footerContent {
+	color:  #fff;
+}
+
+#main {
+	background-color: #fff;
+	border-top: 1px solid #B10000;
+	border-bottom: 1px dotted #B10000;
+	margin-top: 15px;
+}
+
+#main h2 {
+	font-family: "Scalia", Times, Georgia, serif;
+	text-transform: uppercase;
+}
+
+#main h3 {
+	font-family: "Scalia", Times, Georgia, serif;
+	text-transform: uppercase;
+}
+
+#navbar {
+	border-bottom: 1px dotted #B10000;
+	text-align: center;
+}
+
+#breadcrumb {
+	height: 18px;
+	line-height: 1.5em;
+	text-align: center;
+	border-bottom: 1px dotted #B10000;
+	padding: 0;
+	font-style: italic;
+}
+
+#content {
+	margin: 0;
+	padding: 0;
+	padding-top: 0.5em;
+	font-size:  0.8em;
+	border-top: 1px dotted #B10000;
+}
+
+#content h3 {
+	font-family:  "Scalia", Times, Georgia, serif;
+	text-transform: uppercase;
+}
+
+#content h4 {
+	font-family:  "Scalia", Times, Georgia, serif;
+	text-transform: uppercase;
+}
+
+#content h5 {
+	text-transform: uppercase;
+}
+
+span.highlight {
+	border-bottom: 1px dotted #B10000;
+}
+
+table.tocArticle {
+	width: 100%;
+        margin-bottom: 10px;
+}
+
+table.listing tr.highlight {
+	background: #fcff64;
+}
+
+table.listing tr.fastTracked {
+	background-color: #ecc;
+}
+
+table.listing td.headseparator {
+	border-top: 1px dotted #B10000;
+}
+
+table.listing td.endseparator {
+	border-top: 1px dotted #B10000;
+}
+
+span.formError {
+	color: #f60;
+}
+
+ul.formErrorList {
+	color: #f60;
+}
+
+div.separator {
+	border-bottom: 1px dotted #B10000;
+}
+
+#rightSidebar ul, #leftSidebar ul {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+#rightSidebar li, #leftSidebar li {
+	list-style-type: none;
+}
+
+#rightSidebar, #leftSidebar {
+	margin-top: 5px;
+	border-bottom: 1px dotted #B10000;
+}
+

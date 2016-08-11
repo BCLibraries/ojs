@@ -1,0 +1,264 @@
+/**
+ * jtla.css
+ *
+ * Journal of Technology, Learning and Assessment stylesheet.  Adopted from vanilla.css
+ *
+ */
+
+
+body {
+	background-color: #ffffff;
+	background: url("/ojs/public/journals/6/vertBorder.gif") top left repeat-y;
+	color: #000000;
+	/*font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 13px;
+	line-height: 16px;
+	padding: 0px;
+	margin: 0px;
+	min-width: 900px;*/
+}
+
+p {
+	margin: 10px;
+	font-size: 11px;
+}
+
+div {
+	font-size: 13px;
+}
+
+div.sidebar_block {
+  margin: 17px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+
+a {
+	font-size: 13px;
+}
+
+a:link { 
+  text-decoration:none; 
+  font-weight:bold; 
+  color:#cc6600;
+}
+
+
+a:active {
+	color: #000000;
+	
+}
+
+a:visited { 
+  text-decoration:none; 
+  font-weight:bold; 
+  color:#cc6600;
+}
+
+a:hover { 
+  text-decoration:none; 
+  font-weight:bold; 
+  color:#4c4cf2;
+  background: #FFFFFF;
+}
+
+.header_1 {
+  width: 100%;
+  border-bottom: 3px solid #E5B27F;
+  background: #F8E9DB;
+}
+.header_1 span {
+  font-size: 18px;
+  line-height: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0 5px 0 16px;
+  text-align:left;
+  color: #000;
+}
+
+
+input.textField, select.selectMenu, textarea.textArea, input.uploadField {
+	background-color: #eeeeee;
+}
+
+input.defaultButton {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+#header {
+	background-color: #ffffff;
+	/*border-bottom: 1px solid black;*/
+	background: url("/ojs/public/journals/6/horzBorder.gif") top left repeat-x;
+	padding: 0px;
+	padding-left: 1px;
+	margin: 0px;
+	width: 100%;
+}
+
+#header h1 {
+	margin: 0 auto;
+	padding: 0px;
+	font-family: Georgia,'Times New Roman',Times,serif;
+	font-weight: normal;
+}
+
+#main {
+	background-color: #ffffff;
+	/*border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;*/
+}
+
+#main h2 {
+	padding-left: 10px;
+}
+
+td.tocGalleys {
+	padding-right: 10px;
+}
+
+#navbar {
+	padding-left: 10px;
+	border-bottom: 1px solid black;
+}
+
+#breadcrumb {
+	padding-left: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;	
+}
+
+#content {
+	padding-left: 10px;
+	border-top: 0px dotted #000;
+}
+
+#leftSidebar {
+	float: left;
+	width: 155px; 
+	padding: 1em 0em 1em 0em;
+	font-size: 0.65em;
+	height: 100%;
+	margin-left: 30px;
+	display: block;
+	overflow: hidden;
+}
+
+
+/* JTLA created Style information - from BePress site
+----------------------------------------------------*/
+
+.body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	line-height: 16px;
+	margin-top: 1em;
+        width: 99%;
+	margin-bottom: 0.25em;
+/*	margin-right: 2em;
+	margin-left: 1em; */
+}
+
+.bodybulletlist {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	line-height: 16px;
+	margin-top: .25em;
+	margin-left: 1em;
+	margin-bottom: 0.25em;
+	margin-right: 2em;
+	list-style-position: outside;
+	list-style-type: disc;
+}
+
+.b_head {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #000000;
+	line-height: 20px;
+	margin-top: 1em;
+	margin-left: 0.75em;
+	margin-bottom: -.5em;
+	margin-right: 2em;
+	font-weight: bold;
+}
+
+.volume {
+	background-color: #f8e9db;
+        margin-right: 0em;
+	margin-bottom: 0em;
+	padding-top: 3px;
+	padding-right: 8px;
+	padding-bottom: 3px;
+	padding-left: 8px;
+	vertical-align: middle;
+}
+
+.volumerule {
+        font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: bold;
+	color: #000000;
+	background-color: #FFFFFF;
+	padding-bottom: 2px;
+	margin-left: 0.8em;
+	border-bottom-width: medium;
+	border-bottom-style: solid;
+	border-bottom-color: #e5b27f;
+	margin-bottom: 0em;
+	margin-top: 1em;
+}
+
+.vol_num_date {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #000000;
+	font-weight: bold;
+	line-height: 18px;
+	margin-left: 1em;
+	margin-top: 5px;
+	margin-bottom: 0em;
+}
+
+.vol_num_date a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.articletitle {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: bold;
+	color: #cc6600;
+	margin-left: 4em;
+	margin-top: 0px;
+	margin-bottom: 0;
+	max-width: 500px;
+}
+
+.abstractauthor {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	color: #cc6600;
+	font-weight: bold;
+	line-height: 18px;
+	margin-left: 2.1em;
+	margin-top: 5px;
+	margin-bottom: 0em;
+}
+
+/* blue color for call for papers, added by benny 1/5/9 */
+.callblue {color:#5255F7;}
+
+/* special treatment for volume titles, contained in a new span within the existing span in .header_1, added by Kyle 12/30/09 */
+.header_1 span span {
+        display: block;
+        font-size: 85%; }
