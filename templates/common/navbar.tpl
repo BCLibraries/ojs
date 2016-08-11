@@ -14,7 +14,7 @@
 		<li id="about"><a href="{url page="about"}">{translate key="navigation.about"}</a></li>
 
 		{if $isUserLoggedIn}
-			<li id="userHome"><a href="{if $hasOtherJournals}{url journal="index" page="user"}{else}{url page="user"}{/if}">{translate key="navigation.userHome"}</a></li>
+			<li id="userHome"><a href="{url page="user"}">{translate key="navigation.userHome"}</a></li>
 		{else}
 			{** BEGIN Suppress login for Jesuits *}
                         {if $currentJournal && $currentJournal->getJournalId() == 11}
