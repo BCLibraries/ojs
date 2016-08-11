@@ -20,6 +20,19 @@
 			{if !$hideRegisterLink}
 				<li id="register"><a href="{url page="user" op="register"}">{translate key="navigation.register"}</a></li>
 			{/if}
+                        {** BEGIN Change Register text for IHE 20140609 *}
+                        {if !$hideRegisterLink}
+                            {if $currentJournal}
+                                {if $currentJournal->getJournalId() == 16}
+                                        <li id="register"><a href="{url page="user" op="register"}">{translate key="navigation.registerihe"}</a></li>
+                                {else}
+                                        <li id="register"><a href="{url page="user" op="register"}">{translate key="navigation.register"}</a></li>
+                                {/if}
+                            {else}
+                                   <li id="register"><a href="{url page="user" op="register"}">{translate key="navigation.register"}</a></li>
+                            {/if}
+                        {/if}
+                        {**END *}
 		{/if}{* $isUserLoggedIn *}
 
 		{if $siteCategoriesEnabled}
