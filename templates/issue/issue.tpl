@@ -88,9 +88,13 @@
 				{/if}
 			{/if}
 		</div>
-		<div class="tocPages">
-			{$article->getPages()|escape}
-		</div>
+		{** BEGIN Code to suppress Pages for LEV *}
+		{if $issue->getJournalId() != 8}
+			<div class="tocPages">
+				{$article->getPages()|escape}
+			</div>
+		{/if}
+		{** END *}
 	</td>
 </tr>
 </table>
