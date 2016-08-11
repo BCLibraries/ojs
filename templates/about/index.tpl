@@ -53,11 +53,17 @@
 <div id="aboutSubmissions">
 <h3>{translate key="about.submissions"}</h3>
 <ul>
-	<li><a href="{url op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>
+	{** BEGIN Jesuit suppress link *}
+        {if $currentJournal->getJournalId() == 11}
+                <li><a href="{url op="submissions"}">Submissions</a></li>
+        {else}
+	{if !$currentJournal->getSetting('disableUserReg')}<li><a href="{url op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>{/if}
 	{if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}<li><a href="{url op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
 	{if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}<li><a href="{url op="submissions" anchor="copyrightNotice"}">{translate key="about.copyrightNotice"}</a></li>{/if}
 	{if $currentJournal->getLocalizedSetting('privacyStatement') != ''}<li><a href="{url op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>{/if}
 	{if $currentJournal->getSetting('journalPaymentsEnabled') && ($currentJournal->getSetting('submissionFeeEnabled') || $currentJournal->getSetting('fastTrackFeeEnabled') || $currentJournal->getSetting('publicationFeeEnabled'))}<li><a href="{url op="submissions" anchor="authorFees"}">{translate key="about.authorFees"}</a></li>{/if}
+	{/if}
+	{** END *}
 	{call_hook name="Templates::About::Index::Submissions"}
 </ul>
 </div>
