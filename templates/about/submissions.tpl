@@ -18,6 +18,10 @@
 	{assign var="authorFees" value=1}
 {/if}
 
+{** BEGIN Jesuit suppress *}
+{if $currentJournal->getJournalId() == 11}
+{include file="about/jesuitcontact.tpl"}
+{else}
 <ul>
 	<li id="linkDisableUserReg"><a href="{url page="about" op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>
 	{if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}<li id="linkAuthorGuidelines"><a href="{url page="about" op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
@@ -62,6 +66,7 @@
 	<div class="separator">&nbsp;</div>
 	</div>
 {/if}{* $submissionChecklist *}
+{/if} {* END of Jesuit **}
 
 {if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}
 <div id="copyrightNotice"><h3>{translate key="about.copyrightNotice"}</h3>
@@ -98,6 +103,8 @@
 		<p>{$currentJournal->getLocalizedSetting('waiverPolicy')|nl2br}</p>
 	{/if}
 </div>
+{/else}
+{include file="about/jesuitcontact.tpl"}
 {/if}
 {include file="common/footer.tpl"}
 
