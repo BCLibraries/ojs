@@ -52,7 +52,6 @@
 
 <div id="header">
 <div id="headerTitle">
-<h1>{translate key="about.editorialTeam"}</h1>
 </div>
 </div>
 
