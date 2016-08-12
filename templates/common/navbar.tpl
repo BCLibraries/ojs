@@ -39,11 +39,16 @@
 		{/if}{* $isUserLoggedIn *}
 
 		{if $siteCategoriesEnabled}
-			<li id="categories"><a href="{url journal="index" page="search" op="categories"}">{translate key="navigation.categories"}</a></li>
+        <li id="categories"><a href="{url journal="index" page="search" op="categories"}">{translate key="navigation.categories"}</a></li>
 		{/if}{* $categoriesEnabled *}
 
 		{if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
-			<li id="search"><a href="{url page="search"}">{translate key="navigation.search"}</a></li>
+        {** BEGIN Suppress search for BBAGT *}
+        {if $currentJournal && $currentJournal->getJournalID() == 20 }
+        {else}
+          <li id="search"><a href="{url page="search"}">{translate key="navigation.search"}</a></li>
+        {/if}
+        {** END *}
 		{/if}
 
 		{if $currentJournal && $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
@@ -55,6 +60,14 @@
 			<li id="archives"><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
 		{/if}
 
+    {** BEGIN Custom menu for BBAGT *}
+    {if $currentJournal && $currentJournal->getJournalID() == 20 }
+          {if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}<li><a href="{url op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
+          <li id="search"><a href="pages/view/reviewerguidelines">Reviewer Guidelines</a></li>
+          <li id="search"><a href="{url page="search"}">{translate key="navigation.search"}</a></li>
+    {else}
+    {/if}
+    {** END *}
 		{if $enableAnnouncements}
 			<li id="announcements"><a href="{url page="announcement"}">{translate key="announcement.announcements"}</a></li>
 		{/if}{* enableAnnouncements *}
