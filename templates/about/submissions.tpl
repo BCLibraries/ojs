@@ -39,10 +39,12 @@
 {if $currentJournal->getJournalId() != 19}
 	<div id="onlineSubmissions">
 		<h3>{translate key="about.onlineSubmissions"}</h3>
+    <h4>Returning Author:</h4>
 		<p>
 			{translate key="about.onlineSubmissions.haveAccount" journalTitle=$siteTitle|escape}<br />
 			<a href="{url page="login"}" class="action">{translate key="about.onlineSubmissions.login"}</a>
 		</p>
+    <h4>New Author:</h4>
 		<p>
 			{translate key="about.onlineSubmissions.needAccount"}<br />
 			<a href="{url page="user" op="register"}" class="action">{translate key="about.onlineSubmissions.registration"}</a>
