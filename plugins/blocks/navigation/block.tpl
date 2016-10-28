@@ -10,6 +10,19 @@
  *}
 {if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 <div class="block" id="sidebarNavigation">
+  {** BEGIN custom block for BBAGT *}
+  {if $currentJournal && $currentJournal->getJournalID() == 20 }
+  <span class="blockTitle">Submissions</span>
+	<ul>
+		<li><a href="{url page="about" op="submissions"}#onlineSubmissions">Submit an Article</a></li>
+		<li><a href="{url page="pages" op="view"}/authorguidelines">Author Guidelines</a></li>
+    <li><a href="{url page="about" op="editorialPolicies"}#openAccessPolicy">Open Access Policy</a></li>
+		<li><a href="{url page="pages" op="view"}/reviewerguidelines">Reviewer Guidelines</a></li>
+  </ul>
+  {else}
+  {/if}
+  {** END *}
+
 	<span class="blockTitle">{translate key="plugins.block.navigation.journalContent"}</span>
 
 	<form id="simpleSearchForm" action="{url page="search" op="search"}">
