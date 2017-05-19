@@ -470,6 +470,9 @@ ul.tagit input[type="text"] {
     outline: none;
 }
 
+div.warningMessage {
+    background: none;
+}
 
 /* @end */
 
