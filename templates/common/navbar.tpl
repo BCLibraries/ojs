@@ -55,7 +55,10 @@
 
 		{if $currentJournal && $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
                 {** BEGIN Suppress Current link for Integritas 20131101 *}
-			{if $currentJournal && $currentJournal->getJournalId() != 12}		
+			{if $currentJournal && $currentJournal->getJournalID() == 20}
+				<li id="current"><a href="{url page="issue" op="current"}">Current&nbsp;Issue</a></li>
+			{elseif $currentJournal && $currentJournal->getJournalId() == 12}
+			{else}
 				<li id="current"><a href="{url page="issue" op="current"}">{translate key="navigation.current"}</a></li>
 			{/if}
 		{** END *}
