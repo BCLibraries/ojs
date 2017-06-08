@@ -43,7 +43,14 @@
 		{/if}{* $categoriesEnabled *}
 
 		{if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
-			<li id="search"><a href="{url page="search"}">{translate key="navigation.search"}</a></li>
+			{** BEGIN Suppress search for BBAGT *}
+			{if $currentJournal && $currentJournal->getJournalID() == 20}
+
+			{else}
+				<li id="search"><a href="{url page="search"}">{translate key="navigation.search"}</a></li>
+
+			{/if}
+			{** END **}
 		{/if}
 
 		{if $currentJournal && $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
