@@ -27,7 +27,7 @@
                         {if !$hideRegisterLink}
                             {if $currentJournal}
                                 {if $currentJournal->getJournalId() == 16}
-                                        <li id="register"><a href="{url page="user" op="register"}">{translate key="navigation.registerihe"}</a></li>
+                                        <li id="register"><a href="{url page="user" op="register"}">Subscribe</a></li>
                                 {else}
                                         <li id="register"><a href="{url page="user" op="register"}">{translate key="navigation.register"}</a></li>
                                 {/if}
