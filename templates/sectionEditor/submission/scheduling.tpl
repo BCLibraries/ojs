@@ -52,7 +52,7 @@
 					{assign var=currentYear value=$smarty.now|date_format:"%Y"}
 					{if $publishedArticle->getDatePublished()}
 						{assign var=publishedYear value=$publishedArticle->getDatePublished()|date_format:"%Y"}
-						{math|assign:"minYear" equation="min(x,y)-10" x=$publishedYear y=$currentYear}
+						{math|assign:"minYear" equation="min(x,y)-50" x=$publishedYear y=$currentYear}
 						{math|assign:"maxYear" equation="max(x,y)+2" x=$publishedYear y=$currentYear}
 					{else}
 						{* No issue publication date info *}
