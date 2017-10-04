@@ -13,21 +13,31 @@
 		<li id="home"><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
 		<li id="about"><a href="{url page="about"}">{translate key="navigation.about"}</a></li>
 
-		{if $isUserLoggedIn}
-			<li id="userHome"><a href="{url page="user"}">{translate key="navigation.userHome"}</a></li>
-		{else}
-			{** BEGIN Suppress login for Jesuits *}
-                        {if $currentJournal && $currentJournal->getJournalId() == 11}
+                {if $isUserLoggedIn}
+                        <li id="userHome"><a href="{url page="user"}">{translate key="navigation.userHome"}</a></li>
+                {else}
+                        {if $currentJournal }
+                                {** BEGIN Suppress login for Jesuits *}
+                                {if $currentJournal->getJournalId() == 11 }
                                 <li id="login"><a href="{url page="notification"}/subscribeMailList">Subscribe</li>
-                        {else}
+                                {**END *}
+                                {elseif $currentJournal->getJournalId() == 20 }
+                                {** BEGIN Change Login text for BBAGW *}
+                                <li id="login"><a href="{url page="login"}">Login/Register</li>
+                                {**END *}
+                                {else}
                                 <li id="login"><a href="{url page="login"}">{translate key="navigation.login"}</a></li>
+                                {/if}
                         {/if}
-                        {**END *}
-                        {** BEGIN Change Register text for IHE 20140609 *}
                         {if !$hideRegisterLink}
                             {if $currentJournal}
+                                {** BEGIN Change Register text for IHE 20140609 *}
                                 {if $currentJournal->getJournalId() == 16}
                                         <li id="register"><a href="{url page="user" op="register"}">Subscribe</a></li>
+                                {**END *}
+                                {** BEGIN Suppress Register link for BBAGW *}
+                                {elseif $currentJournal->getJournalId() == 20 }
+                                {**END *}
                                 {else}
                                         <li id="register"><a href="{url page="user" op="register"}">{translate key="navigation.register"}</a></li>
                                 {/if}
@@ -35,8 +45,7 @@
                                    <li id="register"><a href="{url page="user" op="register"}">{translate key="navigation.register"}</a></li>
                             {/if}
                         {/if}
-                        {**END *}
-		{/if}{* $isUserLoggedIn *}
+                {/if}{* $isUserLoggedIn *}
 
 		{if $siteCategoriesEnabled}
 			<li id="categories"><a href="{url journal="index" page="search" op="categories"}">{translate key="navigation.categories"}</a></li>
