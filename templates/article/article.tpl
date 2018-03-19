@@ -43,6 +43,13 @@
 		</div>
 	{/if}
 	{call_hook name="Templates::Article::Article::ArticleCoverImage"}
+	{if $currentJournal }
+                {** BEGIN Custom Article Header for ITAL *}
+                {if $currentJournal->getJournalId() == 7 }
+                        <div style="text-align: center; border: 1px solid black; margin: 1.5em; padding: .5em;" align="center !important"><p><strong>Help Us Understand ITAL's Readership</strong></p><p>Take this <a href="https://umich.qualtrics.com/jfe/form/SV_6hafly0cYJpBK4J">brief survey</a> to tell us a little about how you came to ITAL today, how you're connected with library technology, and what you'd like to see in the journal. It won't take much of your time (no more than 5 minutes) and will help us understand the context in which we are working.</p></div>
+
+                {/if}
+        {/if}
 	<div id="articleTitle"><h3>{$article->getLocalizedTitle()|strip_unsafe_html}</h3></div>
 	<div id="authorString"><em>{$article->getAuthorString()|escape}</em></div>
 	<br />
